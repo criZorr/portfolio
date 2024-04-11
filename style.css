@@ -466,6 +466,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.about .btn {
+  transition: all 0.5s ease-out;
+}
+
 .about .btn:hover {
   background-color: var(--second-color);
   color: var(--first-color);
@@ -633,6 +637,8 @@ body {
 .service-card svg {
   fill: var(--first-color);
   margin-bottom: 1.25rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .service-card h3 {
