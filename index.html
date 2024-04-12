@@ -49,8 +49,8 @@
     />
   </head>
 
-  <body>
-    <header class="header">
+  <body class="dark-mode-text dark-mode-bg-black">
+    <header class="header dark-mode-bg-gray">
       <section class="container">
         <div class="logo">
           <svg
@@ -75,9 +75,9 @@
               />
             </g>
           </svg>
-          <a href="index.html">criZorr</a>
+          <a class="dark-mode-text" href="index.html">criZorr</a>
         </div>
-        <button class="menu-btn">
+        <button class="menu-btn dark-mode-bg-gray">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -98,12 +98,12 @@
             />
           </svg>
         </button>
-        <nav class="menu">
-          <a href="#inicio">Inicio</a>
-          <a href="#acerca">Acerca</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#portafolio">Proyectos</a>
-          <a href="#contacto">Contacto</a>
+        <nav class="menu dark-mode-bg-gray">
+          <a class="dark-mode-text" href="#inicio">Inicio</a>
+          <a class="dark-mode-text" href="#acerca">Acerca</a>
+          <a class="dark-mode-text" href="#servicios">Servicios</a>
+          <a class="dark-mode-text" href="#portafolio">Trabajos</a>
+          <a class="dark-mode-text" href="#contacto">Contacto</a>
         </nav>
       </section>
     </header>
@@ -172,34 +172,57 @@
             <b>Diseño <i>Web</i></b>
             <b>60%</b>
           </p>
-          <progress value="60" min="0" max="100"></progress>
+          <progress
+            class="dark-mode-bg-gray-light"
+            value="60"
+            min="0"
+            max="100"
+          ></progress>
         </div>
         <div class="progress">
           <p>
             <b>Desarrollo <i>Web Frontend</i></b>
             <b>50%</b>
           </p>
-          <progress value="50" min="0" max="100"></progress>
+          <progress
+            class="dark-mode-bg-gray-light"
+            value="50"
+            min="0"
+            max="100"
+          ></progress>
         </div>
         <div class="progress">
           <p>
             <b>Diseño digital</b>
             <b>70%</b>
           </p>
-          <progress value="70" min="0" max="100"></progress>
+          <progress
+            class="dark-mode-bg-gray-light"
+            value="70"
+            min="0"
+            max="100"
+          ></progress>
         </div>
         <div class="progress">
           <p>
             <b>Ofimática</b>
             <b>90%</b>
           </p>
-          <progress value="90" min="0" max="100"></progress>
+          <progress
+            class="dark-mode-bg-gray-light"
+            value="90"
+            min="0"
+            max="100"
+          ></progress>
         </div>
       </article>
     </section>
-    <section id="servicios" class="services section bg-gray-light">
+    <section
+      id="servicios"
+      class="services section bg-gray-light dark-mode-bg-gray"
+    >
       <div class="container full-lg-screen">
-        <h2 class="section-title">¿Qué te ofrezco?</h2>
+        <h2 class="section-title dark-mode-text">¿Qué te ofrezco?</h2>
         <article class="service-card">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +237,7 @@
               d="M9.293 9.293L5.586 13 9.293 16.707 10.707 15.293 8.414 13 10.707 10.707zM14.707 9.293L13.293 10.707 15.586 13 13.293 15.293 14.707 16.707 18.414 13z"
             />
           </svg>
-          <h3>Desarrollo <i>Web Frontend</i></h3>
+          <h3 class="dark-mode-text">Desarrollo <i>Web Frontend</i></h3>
           <p>
             Desarrollo sitios y aplicaciones <i>Web</i> responsivas, intuitivas
             y funcionales.
@@ -233,7 +256,7 @@
               d="M21.73682,3.751,19.31689,1.33105a.99964.99964,0,0,0-1.41406,0L13.32275,5.91113a1.00013,1.00013,0,0,0-.293.707V9.03809a1.00005,1.00005,0,0,0,1,1H16.4502a1.00014,1.00014,0,0,0,.707-.293L21.73682,5.165A.99964.99964,0,0,0,21.73682,3.751ZM16.03613,8.03809H15.02979V7.03223l3.58007-3.58008L19.61572,4.458ZM19,11a1,1,0,0,0-1,1v2.3916l-1.48047-1.48047a2.78039,2.78039,0,0,0-3.92822,0l-.698.698L9.40723,11.123a2.777,2.777,0,0,0-3.92432,0L4,12.606V7A1.0013,1.0013,0,0,1,5,6h6a1,1,0,0,0,0-2H5A3.00328,3.00328,0,0,0,2,7V19a3.00328,3.00328,0,0,0,3,3H17a3.00328,3.00328,0,0,0,3-3V12A1,1,0,0,0,19,11ZM5,20a1.0013,1.0013,0,0,1-1-1V15.43408l2.897-2.897a.79926.79926,0,0,1,1.09619,0l3.168,3.16711c.00849.00916.0116.02179.02045.03064L15.44714,20Zm13-1a.97137.97137,0,0,1-.17877.53705l-4.51386-4.51386.698-.698a.77979.77979,0,0,1,1.1001,0L18,17.21973Z"
             />
           </svg>
-          <h3>Diseño digital</h3>
+          <h3 class="dark-mode-text">Diseño digital</h3>
           <p>Elaboro plantillas e imágenes para proyectos en línea.</p>
         </article>
         <article class="service-card">
@@ -257,24 +280,28 @@
               />
             </g>
           </svg>
-          <h3>Ofimática</i></h3>
-          <p>Realizo proyectos en la <i>Suite</i> de Office, destacando principalmente Excel.</p>
+          <h3 class="dark-mode-text">Ofimática</h3>
+          <p>
+            Realizo proyectos en la <i>Suite</i> de Office, destacando
+            principalmente Excel.
+          </p>
         </article>
       </div>
     </section>
     <section id="portafolio" class="portfolio section">
       <div class="container">
-        <h2 class="section-title">Mis trabajos</h2>
+        <h2 class="section-title dark-mode-text">Mis trabajos</h2>
         <a href="#trabajo-1" class="portfolio-card">
           <img src="assets/portfolio-1.jpg" alt="Trabajo 1" />
           <aside class="portfolio-card-info">
             <div>
-              <h3>Proyecto 1</h3>
+              <h3>Guías de personajes</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                fuga inventore atque placeat laudantium dolorem quod omnis
-                assumenda, tempore fugiat consequatur saepe reprehenderit
-                consequuntur impedit pariatur. Enim fugiat amet libero.
+                Elaboré una hoja de cálculo en Excel para obtener, manejar,
+                crear y generar datos acerca de los personajes del videojuego
+                <i>Genshin Impact</i>. Como paso final, vinculé los datos
+                generados a Photoshop para crear de manera automatizada tarjetas
+                informativas de cada personaje.
               </p>
             </div>
           </aside>
@@ -283,12 +310,10 @@
           <img src="assets/portfolio-2.jpg" alt="Trabajo 2" />
           <aside class="portfolio-card-info">
             <div>
-              <h3>Proyecto 2</h3>
+              <h3>Studio BAD DOG</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                fuga inventore atque placeat laudantium dolorem quod omnis
-                assumenda, tempore fugiat consequatur saepe reprehenderit
-                consequuntur impedit pariatur. Enim fugiat amet libero.
+                Realicé esta página de práctica completamente responsiva y
+                funcional con el <i>framework</i> Bootstrap.
               </p>
             </div>
           </aside>
@@ -297,54 +322,12 @@
           <img src="assets/portfolio-3.jpg" alt="Trabajo 3" />
           <aside class="portfolio-card-info">
             <div>
-              <h3>Proyecto 3</h3>
+              <h3>Control de recursos</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                fuga inventore atque placeat laudantium dolorem quod omnis
-                assumenda, tempore fugiat consequatur saepe reprehenderit
-                consequuntur impedit pariatur. Enim fugiat amet libero.
-              </p>
-            </div>
-          </aside>
-        </a>
-        <a href="#trabajo-4" class="portfolio-card">
-          <img src="assets/portfolio-4.jpg" alt="Trabajo 4" />
-          <aside class="portfolio-card-info">
-            <div>
-              <h3>Proyecto 4</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                fuga inventore atque placeat laudantium dolorem quod omnis
-                assumenda, tempore fugiat consequatur saepe reprehenderit
-                consequuntur impedit pariatur. Enim fugiat amet libero.
-              </p>
-            </div>
-          </aside>
-        </a>
-        <a href="#trabajo-5" class="portfolio-card">
-          <img src="assets/portfolio-5.jpg" alt="Trabajo 5" />
-          <aside class="portfolio-card-info">
-            <div>
-              <h3>Proyecto 5</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                fuga inventore atque placeat laudantium dolorem quod omnis
-                assumenda, tempore fugiat consequatur saepe reprehenderit
-                consequuntur impedit pariatur. Enim fugiat amet libero.
-              </p>
-            </div>
-          </aside>
-        </a>
-        <a href="#trabajo-6" class="portfolio-card">
-          <img src="assets/portfolio-6.jpg" alt="Trabajo 6" />
-          <aside class="portfolio-card-info">
-            <div>
-              <h3>Proyecto 6</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                fuga inventore atque placeat laudantium dolorem quod omnis
-                assumenda, tempore fugiat consequatur saepe reprehenderit
-                consequuntur impedit pariatur. Enim fugiat amet libero.
+                Elaboré una hoja de cálculo en Excel para administrar,
+                contabilizar y observar los recursos dentro del juego
+                <i>Genshin Impact</i>. Añadí interactividad con botones,
+                funciones y programación VBA.
               </p>
             </div>
           </aside>
@@ -365,27 +348,33 @@
             />
           </svg>
         </a>
-        <article class="portfolio-modal">
+        <article class="portfolio-modal dark-mode-bg-gray">
           <img src="assets/portfolio-1.jpg" alt="Trabajo 1" />
           <div class="portfolio-info">
-            <h3>PROYECTO 1</h3>
+            <h3 class="dark-mode-text">
+              Guías de personajes del <i>Genshin Impact</i>
+            </h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              nihil excepturi blanditiis consequatur, sequi, voluptatibus quo
-              necessitatibus facere possimus voluptates deleniti provident
-              tempora recusandae odio! Expedita, ut! Molestiae, excepturi aut?
+              Elaboré una hoja de cálculo en Excel para obtener, manejar, crear
+              y generar datos acerca de los personajes del videojuego
+              <i>Genshin Impact</i>. Como paso final, vinculé los datos
+              generados a Photoshop para crear de manera automatizada tarjetas
+              informativas de cada personaje.
             </p>
             <aside class="portfolio-details">
-              <small><b>CLIENTE:</b></small>
-              <small>Nombre del Cliente</small>
+              <small><b>AUTOR:</b></small>
+              <small>criZorr</small>
               <small><b>FECHA:</b></small>
-              <small>4 de abr. de 2024</small>
+              <small>13 de sep. de 2022 - actualidad</small>
               <small><b>TIPO:</b></small>
-              <small>Tipo de proyecto</small>
+              <small>Manejo de datos y diseño digital</small>
               <small><b>ENLACE:</b></small>
               <small
-                ><a href="https://crizorr.com" target="_blank" rel="noopener"
-                  >https://crizorr.com</a
+                ><a
+                  href="https://www.hoyolab.com/accountCenter/postList?id=8163057"
+                  target="_blank"
+                  rel="noopener"
+                  >https://hoyolab.com/criZorr</a
                 ></small
               >
             </aside>
@@ -407,27 +396,30 @@
             />
           </svg>
         </a>
-        <article class="portfolio-modal">
+        <article class="portfolio-modal dark-mode-bg-gray">
           <img src="assets/portfolio-2.jpg" alt="Trabajo 2" />
           <div class="portfolio-info">
-            <h3>PROYECTO 2</h3>
+            <h3 class="dark-mode-text">Studio BAD DOG</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              nihil excepturi blanditiis consequatur, sequi, voluptatibus quo
-              necessitatibus facere possimus voluptates deleniti provident
-              tempora recusandae odio! Expedita, ut! Molestiae, excepturi aut?
+              Página de práctica maquetada con el <i>framework</i> Bootstrap 5.
+              Es un página responsiva y funcional, sin necesidad de código
+              JavaScript propio, el formulario utiliza la <i>API</i> de
+              FormSubmit a través de HTML y los estilos se modificaron con CSS.
             </p>
             <aside class="portfolio-details">
               <small><b>CLIENTE:</b></small>
-              <small>Nombre del Cliente</small>
+              <small>Studio BAD DOG</small>
               <small><b>FECHA:</b></small>
               <small>4 de abr. de 2024</small>
               <small><b>TIPO:</b></small>
-              <small>Tipo de proyecto</small>
+              <small>Página web de negocio</small>
               <small><b>ENLACE:</b></small>
               <small
-                ><a href="https://crizorr.com" target="_blank" rel="noopener"
-                  >https://crizorr.com</a
+                ><a
+                  href="https://crizorr.github.io/Studio-Bad-Dog/sitios.html"
+                  target="_blank"
+                  rel="noopener"
+                  >https://crizorr.studiobaddog.com</a
                 ></small
               >
             </aside>
@@ -449,163 +441,32 @@
             />
           </svg>
         </a>
-        <article class="portfolio-modal">
+        <article class="portfolio-modal dark-mode-bg-gray">
           <img src="assets/portfolio-3.jpg" alt="Trabajo 3" />
           <div class="portfolio-info">
-            <h3>PROYECTO 3</h3>
+            <h3 class="dark-mode-text">Control de recursos</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              nihil excepturi blanditiis consequatur, sequi, voluptatibus quo
-              necessitatibus facere possimus voluptates deleniti provident
-              tempora recusandae odio! Expedita, ut! Molestiae, excepturi aut?
+              Elaboré una hoja de cálculo en Excel para administrar,
+              contabilizar y observar los recursos dentro del juego
+              <i>Genshin Impact</i>. Añadí interactividad con botones, funciones
+              y programación VBA.
             </p>
             <aside class="portfolio-details">
-              <small><b>CLIENTE:</b></small>
-              <small>Nombre del Cliente</small>
+              <small><b>AUTOR:</b></small>
+              <small>criZorr</small>
               <small><b>FECHA:</b></small>
-              <small>4 de abr. de 2024</small>
+              <small>21 de feb. de 2023</small>
               <small><b>TIPO:</b></small>
-              <small>Tipo de proyecto</small>
-              <small><b>ENLACE:</b></small>
-              <small
-                ><a href="https://crizorr.com" target="_blank" rel="noopener"
-                  >https://crizorr.com</a
-                ></small
-              >
+              <small>Manejo de datos y diseño de interfaz</small>
             </aside>
           </div>
         </article>
       </div>
     </article>
-    <article class="modal" id="trabajo-4">
-      <div class="modal-content">
-        <a href="#cerrar" class="modal-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"
-            />
-          </svg>
-        </a>
-        <article class="portfolio-modal">
-          <img src="assets/portfolio-4.jpg" alt="Trabajo 4" />
-          <div class="portfolio-info">
-            <h3>PROYECTO 4</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              nihil excepturi blanditiis consequatur, sequi, voluptatibus quo
-              necessitatibus facere possimus voluptates deleniti provident
-              tempora recusandae odio! Expedita, ut! Molestiae, excepturi aut?
-            </p>
-            <aside class="portfolio-details">
-              <small><b>CLIENTE:</b></small>
-              <small>Nombre del Cliente</small>
-              <small><b>FECHA:</b></small>
-              <small>4 de abr. de 2024</small>
-              <small><b>TIPO:</b></small>
-              <small>Tipo de proyecto</small>
-              <small><b>ENLACE:</b></small>
-              <small
-                ><a href="https://crizorr.com" target="_blank" rel="noopener"
-                  >https://crizorr.com</a
-                ></small
-              >
-            </aside>
-          </div>
-        </article>
-      </div>
-    </article>
-    <article class="modal" id="trabajo-5">
-      <div class="modal-content">
-        <a href="#cerrar" class="modal-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"
-            />
-          </svg>
-        </a>
-        <article class="portfolio-modal">
-          <img src="assets/portfolio-5.jpg" alt="Trabajo 5" />
-          <div class="portfolio-info">
-            <h3>PROYECTO 5</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              nihil excepturi blanditiis consequatur, sequi, voluptatibus quo
-              necessitatibus facere possimus voluptates deleniti provident
-              tempora recusandae odio! Expedita, ut! Molestiae, excepturi aut?
-            </p>
-            <aside class="portfolio-details">
-              <small><b>CLIENTE:</b></small>
-              <small>Nombre del Cliente</small>
-              <small><b>FECHA:</b></small>
-              <small>4 de abr. de 2024</small>
-              <small><b>TIPO:</b></small>
-              <small>Tipo de proyecto</small>
-              <small><b>ENLACE:</b></small>
-              <small
-                ><a href="https://crizorr.com" target="_blank" rel="noopener"
-                  >https://crizorr.com</a
-                ></small
-              >
-            </aside>
-          </div>
-        </article>
-      </div>
-    </article>
-    <article class="modal" id="trabajo-6">
-      <div class="modal-content">
-        <a href="#cerrar" class="modal-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z"
-            />
-          </svg>
-        </a>
-        <article class="portfolio-modal">
-          <img src="assets/portfolio-6.jpg" alt="Trabajo 6" />
-          <div class="portfolio-info">
-            <h3>PROYECTO 6</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              nihil excepturi blanditiis consequatur, sequi, voluptatibus quo
-              necessitatibus facere possimus voluptates deleniti provident
-              tempora recusandae odio! Expedita, ut! Molestiae, excepturi aut?
-            </p>
-            <aside class="portfolio-details">
-              <small><b>CLIENTE:</b></small>
-              <small>Nombre del Cliente</small>
-              <small><b>FECHA:</b></small>
-              <small>4 de abr. de 2024</small>
-              <small><b>TIPO:</b></small>
-              <small>Tipo de proyecto</small>
-              <small><b>ENLACE:</b></small>
-              <small
-                ><a href="https://crizorr.com" target="_blank" rel="noopener"
-                  >https://crizorr.com</a
-                ></small
-              >
-            </aside>
-          </div>
-        </article>
-      </div>
-    </article>
+
     <section id="contacto" class="contact section">
       <div class="container">
-        <h2 class="section-title">¿Interesado?</h2>
+        <h2 class="section-title dark-mode-text">¿Interesado?</h2>
         <article class="contact-cards">
           <aside class="contact-card box-shadow-1">
             <svg
@@ -624,18 +485,28 @@
           </aside>
           <aside class="contact-card box-shadow-1">
             <svg
-              width="33"
-              height="32"
-              viewBox="0 0 33 32"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M31.8125 1.5625L25.3125 0.0625C24.625 -0.125 23.875 0.25 23.5625 0.9375L20.5625 7.9375C20.3125 8.5625 20.5 9.25 21 9.6875L24.8125 12.8125C22.5625 17.5625 18.625 21.5625 13.75 23.875L10.625 20.0625C10.1875 19.5625 9.5 19.375 8.875 19.625L1.875 22.625C1.1875 22.9375 0.875 23.6875 1 24.375L2.5 30.875C2.6875 31.5625 3.25 32 4 32C20 32 33 19.0625 33 3C33 2.3125 32.5 1.75 31.8125 1.5625Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z"
+                fill=""
               />
             </svg>
-            <h5>CELULAR</h5>
-            <small><a href="tel:0984234613">(+593) 984234613</a></small>
+            <h5>WHATSAPP</h5>
+            <small
+              ><a
+                href="https://wa.me/593994498716?text=Hola,%20me%20interesa%20uno%20de%20tus%20servicios%20digitales."
+                target="_blank"
+                rel="noopener"
+                >(+593) 994498716</a
+              ></small
+            >
           </aside>
           <aside class="contact-card box-shadow-1">
             <svg
@@ -651,8 +522,8 @@
             </svg>
             <h5>E-MAIL</h5>
             <small
-              ><a href="mailto:christophermjk@gmail.com"
-                >christophermjk@gmail.com</a
+              ><a href="mailto:crizorr.contacto@gmail.com"
+                >crizorr.contacto@gmail.com</a
               ></small
             >
           </aside>
@@ -669,22 +540,6 @@
             </svg>
             <h5>REDES SOCIALES</h5>
             <small class="social-media">
-              <a
-                href="https://youtube.com/@criZorr"
-                target="_blank"
-                rel="noopener"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M21.593,7.203c-0.23-0.858-0.905-1.535-1.762-1.766C18.265,5.007,12,5,12,5S5.736,4.993,4.169,5.404	c-0.84,0.229-1.534,0.921-1.766,1.778c-0.413,1.566-0.417,4.814-0.417,4.814s-0.004,3.264,0.406,4.814	c0.23,0.857,0.905,1.534,1.763,1.765c1.582,0.43,7.83,0.437,7.83,0.437s6.265,0.007,7.831-0.403c0.856-0.23,1.534-0.906,1.767-1.763	C21.997,15.281,22,12.034,22,12.034S22.02,8.769,21.593,7.203z M9.996,15.005l0.005-6l5.207,3.005L9.996,15.005z"
-                  />
-                </svg>
-              </a>
               <a
                 href="https://twitter.com/criZorr"
                 target="_blank"
@@ -720,26 +575,6 @@
                 </svg>
               </a>
               <a
-                href="https://instagram.com/_crizorr_"
-                target="_blank"
-                rel="noopener"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624	C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003	c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"
-                  />
-                  <circle cx="16.806" cy="7.207" r="1.078" />
-                  <path
-                    d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42	c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111	c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71	c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45	c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633	c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311	c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311	c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654	c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712	c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055	c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669	c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"
-                  />
-                </svg>
-              </a>
-              <a
                 href="https://linkedin.com/in/crizorr/"
                 target="_blank"
                 rel="noopener"
@@ -760,6 +595,7 @@
         </article>
         <form class="contact-form box-shadow-1">
           <input
+            class="dark-mode-text dark-mode-bg-gray"
             type="text"
             name="name"
             placeholder="Ingresa tu nombre"
@@ -768,6 +604,7 @@
             required
           />
           <input
+            class="dark-mode-text dark-mode-bg-gray"
             type="email"
             name="email"
             placeholder="Ingresa tu correo electrónico"
@@ -776,6 +613,7 @@
             required
           />
           <textarea
+            class="dark-mode-text dark-mode-bg-gray"
             name="comments"
             cols="50"
             rows="10"

@@ -9,7 +9,7 @@
   --white-color: #fafafa;
   --gray-light-color: #eaeaea;
   --gray-color: #cacaca;
-  --gray-dark-color: #5a5a5a;
+  --gray-dark-color: #3a3a3a;
   --black-color: #000;
   --link-color: #409ec4;
   --title-color: #333;
@@ -132,6 +132,7 @@ p {
   border: none;
   cursor: pointer;
   text-align: center;
+  background-color: #ca2525;
   transition: all 0.5s ease-out;
 }
 
@@ -317,8 +318,8 @@ p {
 }
 
 .modal-close svg {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   fill: var(--white-alpha-color);
 }
 
@@ -347,10 +348,12 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
   background-color: var(--gray-dark-color);
+  transition: all 0.5s ease-in-out;
 }
 
 progress::-moz-progress-bar {
   background-color: var(--gray-dark-color);
+  transition: all 0.5s ease-in-out;
 }
 
 .progress {
@@ -457,6 +460,20 @@ progress::-moz-progress-bar {
 }
 
 /* ******** Site Styles ******** */
+
+/* *** Dark mode *** */
+h2,
+h3,
+.dark-mode-text .dark-mode-text::placeholder,
+.dark-mode-bg-black,
+.dark-mode-bg-gray,
+.dark-mode-bg-gray::placeholder,
+.dark-mode-bg-gray-light,
+.dark-mode-bg-gray-light::-webkit-progress-bar,
+.footer,
+.contact-form * {
+  transition: all 0.5s ease-in-out;
+}
 
 body {
   background-color: var(--white-color);
@@ -584,7 +601,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 1rem;
-  background-color: var(--first-alpha-color);
+  background-color: var(--first-color);
   color: var(--white-color);
   opacity: 0;
   pointer-events: none;
@@ -592,7 +609,7 @@ body {
 }
 
 .portfolio-card:hover .portfolio-card-info {
-  opacity: 1;
+  opacity: 0.9;
   pointer-events: auto;
 }
 
@@ -616,6 +633,11 @@ body {
   padding: 0.5rem 0;
   margin: 1rem auto;
   color: var(--title-color);
+}
+
+.portfolio-modal img {
+  max-width: 400px;
+  height: auto;
 }
 
 .portfolio-details {
@@ -693,6 +715,11 @@ body {
     flex-direction: row;
   }
 
+  .portfolio-modal img {
+    max-width: 400px;
+    height: auto;
+  }
+
   .portfolio-info {
     margin-left: 1rem;
     align-self: center;
@@ -747,5 +774,73 @@ body {
 
   .services .section-title {
     grid-column: span 3;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .dark-mode-text {
+    color: var(--white-color) !important;
+  }
+
+  .dark-mode-text::placeholder {
+    color: var(--white-color);
+  }
+
+  .dark-mode-bg-black {
+    background-color: var(--second-color);
+  }
+
+  .dark-mode-bg-gray {
+    background-color: var(--gray-dark-color);
+  }
+
+  .dark-mode-bg-gray::placeholder {
+    background-color: var(--gray-dark-color);
+  }
+
+  .dark-mode-bg-gray-light,
+  .dark-mode-bg-gray-light::-webkit-progress-bar {
+    background-color: var(--gray-color);
+  }
+
+  progress::-webkit-progress-value {
+    background-color: var(--first-alpha-color);
+  }
+
+  progress::-moz-progress-bar {
+    background-color: var(--first-alpha-color);
+  }
+
+  .about .btn:hover,
+  .contact-form input[type="submit"]:hover {
+    background-color: var(--third-color);
+    color: var(--first-color);
+  }
+
+  .social-media svg {
+    fill: var(--third-color);
+  }
+
+  .box-shadow-1 {
+    box-shadow: 0.25rem 0.25rem 1rem rgba(188, 192, 203, 0.25);
+  }
+
+  .menu-btn svg {
+    fill: var(--white-color);
+  }
+
+  .logo svg {
+    fill: var(--white-color);
+  }
+
+  .footer {
+    background-color: var(--gray-light-color);
+    color: var(--second-color);
   }
 }
