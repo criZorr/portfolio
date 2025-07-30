@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>anti-racism</title>
+  </head>
+  <body>
+    <div class="btn-cont">
+      <button class="btn">Support</button>
+    </div>
+    <div class="video-cont">
+      <video class="video-jk" loop>
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <script>
+      const d = document;
+      const $video = d.querySelector(".video-jk"),
+        $btn = d.querySelector(".btn"),
+        $btnContainer = d.querySelector(".btn-cont");
+
+      $btn.addEventListener("click", (e) => {
+        $video.play();
+        $btnContainer.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
