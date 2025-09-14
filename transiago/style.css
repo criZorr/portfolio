@@ -1,0 +1,32 @@
+:root {
+  --font: "Raleway", sans-serif;
+}
+
+/* ******** Reset ******** */
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 85dvw;
+  align-items: center;
+  margin: auto;
+}
+
+body img {
+  width: clamp(10rem, 8.2609rem + 8.6957vw, 15rem);
+}
