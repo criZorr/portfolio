@@ -43,10 +43,14 @@ td {
 
 h1 {
   font-size: 1.75rem;
+  font-family: var(--font-fst);
+  font-weight: 400;
 }
 
 h2 {
   font-size: 1.5rem;
+  font-family: var(--font-fst);
+  font-weight: 400;
 }
 
 h3 {
@@ -74,11 +78,6 @@ span {
 }
 
 /* ********** CLASS STYLES ********** */
-
-.name-font {
-  font-family: var(--font-fst);
-}
-
 .fst-text {
   color: var(--dark-text);
 }
@@ -103,13 +102,17 @@ span {
   font-size: 0.9rem;
 }
 
+.pad-main {
+  padding-inline: clamp(1rem, 0.3043rem + 3.4783vw, 3rem);
+}
+
 /* *********** HEADER *********** */
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: clamp(1rem, 0.3043rem + 3.4783vw, 3rem);
+  /* padding-inline: clamp(1rem, 0.3043rem + 3.4783vw, 3rem); */
   height: 3.5rem;
   width: 100dvw;
   background-color: var(--light-grey-trd);
@@ -144,18 +147,17 @@ header {
 
 /* *********** BODY *********** */
 .principal {
-  padding-inline: 1rem;
+  /* padding-inline: clamp(1rem, 0.3043rem + 3.4783vw, 3rem); */
 }
 
 @media screen and (min-width: 40em) {
   .principal {
-    padding-inline: 3rem;
+    /* padding-inline: 3rem; */
   }
 }
 
 /* ****** Name ****** */
 .principal h1 {
-  font-weight: 400;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -240,6 +242,10 @@ p {
   margin-bottom: 1.25rem;
 }
 
+.text-container > p:last-child {
+  margin-bottom: 0;
+}
+
 mark {
   color: inherit;
 }
@@ -283,4 +289,32 @@ mark {
 
 .table-img p {
   text-align: center;
+}
+
+/* ****** Summaries ****** */
+.principal > details:last-child {
+  margin-bottom: 0.5rem;
+}
+
+details:open span {
+  transform: rotate(-180deg);
+}
+
+details:open summary {
+  margin-bottom: 1rem;
+}
+
+summary {
+  display: flex;
+  padding-top: 1.75rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border-bottom: thin solid var(--light-grey-fst);
+}
+
+summary span {
+  scale: 1.1;
+  transition: transform 0.1s ease-in-out;
 }
