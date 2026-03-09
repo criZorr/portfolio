@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-grey">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body class="fst-text bg-fst">
-    <header class="pad-main bg-light-grey">
+    <header class="pad-main bg-light-grey to-white">
       <section class="header-logo">
         <button class="menu">
           <span class="material-symbols-outlined">menu</span>
@@ -21,13 +21,24 @@
         </figure>
       </section>
       <section class="search">
+        <input type="search" placeholder="Buscar en Wikipedia" />
+        <span class="material-symbols-outlined"> search </span>
         <button>
           <span class="material-symbols-outlined"> search </span>
         </button>
       </section>
     </header>
-    <section>
-      <aside></aside>
+    <section class="main">
+      <aside class="left-nav">
+        <div class="sticky-container">
+          <h4>Contenido</h4>
+          <article class="index">
+            <a class="link-text" href="#">(Arriba)</a>
+            <a class="link-text" href="#">(Arriba)</a>
+            <a class="link-text" href="#">(Arriba)</a>
+          </article>
+        </div>
+      </aside>
       <section class="principal pad-main">
         <h1>Transiago</h1>
         <nav class="nav-panel snd-text">
@@ -62,7 +73,7 @@
             totam error.
           </p>
           <article class="table-container">
-            <table class="table sm-txt">
+            <table class="table sm-txt bg-grey">
               <tbody>
                 <tr>
                   <th colspan="2">Transiago</th>
@@ -139,49 +150,96 @@
             Maxime, dolore consequatur.
           </p>
         </article>
-        <details>
-          <summary>
-            <span class="material-symbols-outlined"> stat_minus_1 </span>
-            <h2>Messi</h2>
-          </summary>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
-            voluptates iure quia quam, odio debitis perspiciatis fugiat et amet
-            minus quae cupiditate libero voluptatum velit neque, dicta aut,
-            harum dolores.
-          </p>
-        </details>
-        <details>
-          <summary>
-            <span class="material-symbols-outlined"> stat_minus_1 </span>
-            <h2>Messi</h2>
-          </summary>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
-            voluptates iure quia quam, odio debitis perspiciatis fugiat et amet
-            minus quae cupiditate libero voluptatum velit neque, dicta aut,
-            harum dolores.
-          </p>
-        </details>
-        <details>
-          <summary>
-            <span class="material-symbols-outlined"> stat_minus_1 </span>
-            <h2>Messi</h2>
-          </summary>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
-            voluptates iure quia quam, odio debitis perspiciatis fugiat et amet
-            minus quae cupiditate libero voluptatum velit neque, dicta aut,
-            harum dolores.
-          </p>
-        </details>
+        <article class="summaries-container">
+          <details open>
+            <summary>
+              <span class="material-symbols-outlined"> stat_minus_1 </span>
+              <h2>Messi</h2>
+            </summary>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+              voluptates iure quia quam, odio debitis perspiciatis fugiat et
+              amet minus quae cupiditate libero voluptatum velit neque, dicta
+              aut, harum dolores.
+            </p>
+          </details>
+          <details open>
+            <summary>
+              <span class="material-symbols-outlined"> stat_minus_1 </span>
+              <h2>Messi</h2>
+            </summary>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+              voluptates iure quia quam, odio debitis perspiciatis fugiat et
+              amet minus quae cupiditate libero voluptatum velit neque, dicta
+              aut, harum dolores.
+            </p>
+          </details>
+          <details open>
+            <summary>
+              <span class="material-symbols-outlined"> stat_minus_1 </span>
+              <h2>Messi</h2>
+            </summary>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+              voluptates iure quia quam, odio debitis perspiciatis fugiat et
+              amet minus quae cupiditate libero voluptatum velit neque, dicta
+              aut, harum dolores.
+            </p>
+          </details>
+        </article>
       </section>
-      <aside></aside>
+      <aside class="right-nav">
+        <div class="sticky-container">
+          <h4>Apariencia</h4>
+          <article class="appearance-option">
+            <p class="snd-text">Texto</p>
+            <div class="option">
+              <input type="radio" name="font-size" id="small" />
+              <label for="small">Pequeño</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="font-size" id="medium" />
+              <label for="medium">Mediando</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="font-size" id="large" />
+              <label for="large">Grande</label>
+            </div>
+          </article>
+          <article class="appearance-option">
+            <p class="snd-text">Ancho</p>
+            <div class="option">
+              <input type="radio" name="width-screen" id="standard" />
+              <label for="standard">Estándar</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="width-screen" id="wide" />
+              <label for="wide">Apaisado</label>
+            </div>
+          </article>
+          <article class="appearance-option">
+            <p class="snd-text">Color</p>
+            <div class="option">
+              <input type="radio" name="color" id="auto" />
+              <label for="auto">Automático</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="color" id="light" />
+              <label for="light">Claro</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="color" id="dark" />
+              <label for="dark">Oscuro</label>
+            </div>
+          </article>
+        </div>
+      </aside>
     </section>
-    <footer class="bg-light-grey">
+    <footer class="bg-light-grey to-white">
       <nav class="pad-main nav-top">
         <span class="material-symbols-outlined"> history </span>
-        <a class="edited" href="https://crizorr.com" target="_blank">
+        <a class="edited" href="" target="_blank">
           <b>Última edición hace 1 día</b> por criZorr
         </a>
         <span class="material-symbols-outlined"> chevron_forward </span>
@@ -189,14 +247,14 @@
       <article class="pad-main other-people snd-text">
         <small>ARTÍCULOS RELACIONADOS</small>
         <section class="cards-container">
-          <div class="info-card">
+          <div class="info-card bg-fst">
             <figure><img src="./assets/eletiv.webp" alt="Eletiv" /></figure>
             <article>
               <p class="fst-text"><strong>Eletiv</strong></p>
               <p>Pederasta en potencia</p>
             </article>
           </div>
-          <div class="info-card">
+          <div class="info-card bg-fst">
             <figure><img src="./assets/eletiv.webp" alt="Eletiv" /></figure>
             <article>
               <p class="fst-text">
@@ -205,7 +263,7 @@
               <p>Pederasta en potencia</p>
             </article>
           </div>
-          <div class="info-card">
+          <div class="info-card bg-fst">
             <figure><img src="./assets/eletiv.webp" alt="Eletiv" /></figure>
             <article>
               <p class="fst-text"><strong>Eletiv</strong></p>
@@ -217,10 +275,10 @@
       <nav class="pad-main nav-bottom">
         <img src="./assets/wikipedia-logo.svg" alt="wikipedia-logo" />
         <section class="copyrights">
-          <figure class="copy-card">
+          <figure class="copy-card bg-fst">
             <img src="./assets/wiki-copy-1.svg" alt="" />
           </figure>
-          <figure class="copy-card">
+          <figure class="copy-card bg-fst">
             <img src="./assets/wiki-copy-2.svg" alt="" />
           </figure>
         </section>
