@@ -167,7 +167,7 @@ header {
 @media screen and (min-width: 40em) {
   header {
     justify-content: start;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .search {
@@ -200,6 +200,10 @@ header {
   header {
     box-shadow: none;
   }
+
+  .header-logo {
+    gap: 2rem;
+  }
 }
 
 /* ********** MAIN ********** */
@@ -228,6 +232,8 @@ header {
   .left-nav {
     display: block;
     min-width: 13rem;
+    min-width: 16rem;
+    min-width: clamp(13rem, 9.5714rem + 5.3571vw, 16rem);
     padding-top: 4.65rem;
   }
 
@@ -235,14 +241,14 @@ header {
     padding-right: 2rem;
   }
 
+  .right-nav {
+    padding-left: 2.5rem;
+  }
+
   .sticky-container {
     margin-bottom: 1rem;
     position: sticky;
     top: 1.5rem;
-  }
-
-  .right-nav {
-    padding-left: 2rem;
   }
 
   .right-nav h4,
@@ -399,15 +405,6 @@ mark {
   border-collapse: collapse;
 }
 
-@media screen and (min-width: 40em) {
-  .table {
-    max-width: 20rem;
-    float: right;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-  }
-}
-
 .table tr {
   display: flex;
   border-bottom: thin solid var(--light-grey-fst);
@@ -428,6 +425,33 @@ mark {
 
 .table-img p {
   text-align: center;
+}
+
+@media screen and (min-width: 40em) {
+  .table {
+    max-width: 20rem;
+    float: right;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    border: thin solid var(--light-grey-fst);
+  }
+
+  .table .title-name {
+    font-size: 1.1rem;
+    padding-bottom: 0;
+  }
+
+  .table .title-th {
+    max-width: 35%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+  }
+
+  .table tr {
+    border-bottom: none;
+  }
 }
 
 /* ****** Summaries ****** */
@@ -601,6 +625,11 @@ summary span {
 /* ***** Links ***** */
 a {
   cursor: pointer;
+  text-decoration: none;
+}
+
+.cards-container a {
+  color: inherit;
 }
 
 .copy-container {
