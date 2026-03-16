@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bg-grey">
+<html lang="en" class="color-os">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,17 +14,25 @@
     <header class="pad-main bg-light-grey to-white">
       <section class="header-logo">
         <button class="menu">
-          <span class="material-symbols-outlined">menu</span>
+          <span class="icon material-symbols-outlined">menu</span>
         </button>
-        <figure class="wiki-logo">
-          <img src="./assets/wikipedia-logo.svg" alt="Logo Wikipedia" />
+        <figure>
+          <img
+            class="wiki-logo"
+            src="./assets/wikipedia-logo.svg"
+            alt="Logo Wikipedia"
+          />
         </figure>
       </section>
       <section class="search">
-        <input type="search" placeholder="Buscar en Wikipedia" />
-        <span class="material-symbols-outlined"> search </span>
+        <input
+          class="snd-text"
+          type="search"
+          placeholder="Buscar en Wikipedia"
+        />
+        <span class="icon material-symbols-outlined"> search </span>
         <button>
-          <span class="material-symbols-outlined"> search </span>
+          <span class="icon material-symbols-outlined"> search </span>
         </button>
       </section>
     </header>
@@ -53,12 +61,12 @@
         </nav>
         <nav class="nav-icons">
           <section class="language">
-            <span class="material-symbols-outlined"> translate </span>
+            <span class="icon material-symbols-outlined"> translate </span>
           </section>
           <section class="actions">
-            <span class="material-symbols-outlined"> download </span>
-            <span class="material-symbols-outlined"> star </span>
-            <span class="material-symbols-outlined"> edit </span>
+            <span class="icon material-symbols-outlined"> download </span>
+            <span class="icon material-symbols-outlined"> star </span>
+            <span class="icon material-symbols-outlined"> edit </span>
           </section>
         </nav>
         <article class="note snd-text bg-grey">
@@ -132,6 +140,31 @@
               </tbody>
             </table>
           </article>
+          <p class="snd-p">
+            <b>Santiago "Transiago" Sebastian Ortega Maya</b> (nacido el
+            <mark class="bg-censored">24</mark> de
+            <mark class="bg-censored">octubre</mark> del
+            <mark class="bg-censored">2000</mark>
+            ) es un esclavo del sistema ecuatoriano, conocido por su paupérrimo
+            rendimiento en todo videojuego que juegue (véase
+            <a
+              class="link-text"
+              href="https://en.wikipedia.org/wiki/Smite_(video_game)"
+              >Smite</a
+            >). Se autoproclama artista visual, aunque su habilidad sea
+            comparable a la de
+            <a
+              class="link-text"
+              href="https://en.wikipedia.org/wiki/Nick_Vujicic"
+              >Nick Vujicic</a
+            >. En una búsqueda desesperada de empleo ha recurrido a la
+            prostitución, actividad que practica todos los sábados. Se habla
+            sobre la existencia de un perfil en
+            <a class="link-text" href="https://en.wikipedia.org/wiki/OnlyFans"
+              >OnlyFans</a
+            >, aunque no se ha podido confirmar hasta el momento, probablemente
+            por su baja popularidad.
+          </p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Voluptatibus odit fuga tempore facere optio nihil corporis soluta
@@ -142,7 +175,7 @@
         <article class="summaries-container">
           <details id="vida-temprana" open>
             <summary>
-              <span class="material-symbols-outlined"> stat_minus_1 </span>
+              <span class="icon material-symbols-outlined"> stat_minus_1 </span>
               <h2>Vida temprana</h2>
             </summary>
             <p>
@@ -160,7 +193,7 @@
           </details>
           <details id="carrera" open>
             <summary>
-              <span class="material-symbols-outlined"> stat_minus_1 </span>
+              <span class="icon material-symbols-outlined"> stat_minus_1 </span>
               <h2>Carrera</h2>
             </summary>
             <p>
@@ -183,7 +216,7 @@
           </details>
           <details id="relaciones-amorosas" open>
             <summary>
-              <span class="material-symbols-outlined"> stat_minus_1 </span>
+              <span class="icon material-symbols-outlined"> stat_minus_1 </span>
               <h2>Relaciones Amorosas</h2>
             </summary>
             <p>
@@ -245,11 +278,11 @@
     </section>
     <footer class="bg-light-grey to-white">
       <nav class="pad-main nav-top">
-        <span class="material-symbols-outlined"> history </span>
+        <span class="icon material-symbols-outlined"> history </span>
         <a class="edited" href="" target="_blank">
           <b>Última edición hace 1 día</b> por criZorr
         </a>
-        <span class="material-symbols-outlined"> chevron_forward </span>
+        <span class="icon material-symbols-outlined"> chevron_forward </span>
       </nav>
       <article class="pad-main other-people snd-text">
         <small>ARTÍCULOS RELACIONADOS</small>
@@ -284,7 +317,11 @@
         </section>
       </article>
       <nav class="pad-main nav-bottom">
-        <img src="./assets/wikipedia-logo.svg" alt="wikipedia-logo" />
+        <img
+          class="wiki-logo"
+          src="./assets/wikipedia-logo.svg"
+          alt="wikipedia-logo"
+        />
         <section class="copyrights">
           <figure class="copy-card bg-fst">
             <img src="./assets/wiki-copy-1.svg" alt="" />
@@ -306,5 +343,6 @@
         </p>
       </section>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
