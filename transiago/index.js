@@ -5,6 +5,7 @@
     $main = d.querySelector(".principal"),
     $options = d.querySelector(".right-nav"),
     $menu = d.querySelector(".menu"),
+    $details = d.querySelectorAll("details"),
     mediaQuery = window.matchMedia("(min-width: 64em)");
 
   if (!localStorage.getItem("theme")) localStorage.setItem("theme", "auto");
@@ -14,6 +15,8 @@
   let theme = localStorage.getItem("theme");
   let wide = localStorage.getItem("wide");
   let fontSize = localStorage.getItem("size");
+
+  console.error("¿Qué haces aquí, sapo?");
 
   const manageFont = (size) => {
     let sndSize = "sm",
@@ -77,6 +80,14 @@
     d.querySelector("#large").checked = "true";
     manageFont("lg");
   }
+
+  mediaQuery.addEventListener("change", (e) => {
+    if (e.matches) {
+      $details.forEach((e) => {
+        e.setAttribute("open", "");
+      });
+    }
+  });
 
   $menu.addEventListener("click", () => {
     let state = $options.style.display;
