@@ -111,31 +111,37 @@ mark {
 .color-os,
 .color-light {
   background-color: var(--bg-grey);
+  transition: background-color 0.25s ease-in;
 }
 
 .color-os .fst-text,
 .color-light .fst-text {
   color: var(--dark-text);
+  transition: color 0.25s ease-in;
 }
 
 .color-os .snd-text,
 .color-light .snd-text {
   color: var(--grey-text);
+  transition: color 0.25s ease-in;
 }
 
 .color-os .bg-fst,
 .color-light .bg-fst {
   background-color: var(--bg-fst);
+  transition: background-color 0.25s ease-in;
 }
 
 .color-os .bg-light-grey,
 .color-light .bg-light-grey {
   background-color: var(--light-grey-trd);
+  transition: background-color 0.25s ease-in;
 }
 
 .color-os .bg-grey,
 .color-light .bg-grey {
   background-color: var(--bg-grey);
+  transition: background-color 0.25s ease-in;
 }
 
 .color-os .bg-censored,
@@ -147,40 +153,49 @@ mark {
 .color-light .link-text {
   color: var(--link-text);
   text-decoration: none;
+  transition: color 0.25s ease-in;
 }
 
 .color-os .icon,
 .color-light .icon {
   color: var(--grey-text);
+  transition: color 0.25s ease-in;
 }
 
 .color-os .bottom-line,
 .color-light .bottom-line {
   border-color: var(--grey-text);
+  transition: border-color 0.25s ease-in;
 }
 
 .color-dark {
   background-color: var(--dark-bg-grey);
+  transition: background-color 0.25s ease-out;
 }
 
 .color-dark .fst-text {
   color: var(--light-text);
+  transition: color 0.25s ease-out;
 }
 
 .color-dark .snd-text {
   color: var(--light-grey-text);
+  transition: color 0.25s ease-out;
 }
 
 .color-dark .bg-fst {
   background-color: var(--dark-bg-fst);
+  transition: background-color 0.25s ease-out;
 }
 
 .color-dark .bg-light-grey {
   background-color: var(--dark-grey-trd);
+  transition: background-color 0.25s ease-out;
 }
 
 .color-dark .bg-grey {
   background-color: var(--dark-bg-grey);
+  transition: background-color 0.25s ease-out;
 }
 
 .color-dark .bg-censored {
@@ -189,14 +204,17 @@ mark {
 
 .color-dark .link-text {
   color: var(--link-dark-text);
+  transition: color 0.25s ease-out;
 }
 
 .color-dark .icon {
   color: var(--light-grey-text);
+  transition: color 0.25s ease-out;
 }
 
 .color-dark .bottom-line {
   border-color: var(--light-grey-text);
+  transition: border-color 0.25s ease-out;
 }
 
 .color-dark .wiki-logo {
@@ -360,6 +378,10 @@ header {
   .header-logo {
     gap: 2rem;
   }
+
+  .header-logo button {
+    display: none;
+  }
 }
 
 /* ********** MAIN ********** */
@@ -375,8 +397,40 @@ header {
   display: none;
 }
 
+.right-nav {
+  position: absolute;
+  top: 3.5rem;
+  left: 0.5rem;
+
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  padding: 1rem;
+
+  transition: visibility 5s ease-in;
+}
+
 .index a:visited {
   font-weight: bold;
+}
+
+.appearance-option {
+  display: flex;
+  flex-direction: column;
+}
+
+.appearance-option p {
+  border-bottom: thin solid var(--light-grey-snd);
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+}
+
+.option {
+  padding-top: 0.5rem;
+}
+
+.option input,
+.option label {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 64em) {
@@ -384,9 +438,16 @@ header {
     padding-inline: 3rem;
   }
 
+  .right-nav {
+    position: static;
+    box-shadow: none;
+    z-index: 1;
+    padding: 0;
+  }
+
   .right-nav,
   .left-nav {
-    display: block;
+    display: block !important;
     min-width: 13rem;
     min-width: 16rem;
     min-width: clamp(13rem, 9.5714rem + 5.3571vw, 16rem);
@@ -422,7 +483,7 @@ header {
     padding-top: 0.5rem;
   }
 
-  .appearance-option {
+  /* .appearance-option {
     display: flex;
     flex-direction: column;
   }
@@ -440,7 +501,7 @@ header {
   .option input,
   .option label {
     cursor: pointer;
-  }
+  } */
 }
 
 /* *********** BODY *********** */

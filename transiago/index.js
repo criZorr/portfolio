@@ -2,7 +2,10 @@
   const d = document,
     $html = d.querySelector("html"),
     $body = d.querySelector("body"),
-    $main = d.querySelector(".principal");
+    $main = d.querySelector(".principal"),
+    $options = d.querySelector(".right-nav"),
+    $menu = d.querySelector(".menu"),
+    mediaQuery = window.matchMedia("(min-width: 64em)");
 
   if (!localStorage.getItem("theme")) localStorage.setItem("theme", "auto");
   if (!localStorage.getItem("wide")) localStorage.setItem("wide", "standard");
@@ -74,6 +77,26 @@
     d.querySelector("#large").checked = "true";
     manageFont("lg");
   }
+
+  $menu.addEventListener("click", () => {
+    let state = $options.style.display;
+    if (state == "" || state == "none") {
+      $options.style.display = "block";
+    } else {
+      $options.style.display = "none";
+    }
+  });
+
+  d.addEventListener("click", (e) => {
+    let state = $options.style.display;
+
+    if (
+      e.target.classList[0] !== "icon" &&
+      state == "block" &&
+      !mediaQuery.matches
+    )
+      $options.style.display = "none";
+  });
 
   d.addEventListener("change", (e) => {
     let id = e.target.id;
