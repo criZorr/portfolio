@@ -98,7 +98,7 @@ button {
   cursor: pointer;
 }
 
-mark {
+.bg-censored {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -147,6 +147,11 @@ mark {
 .color-os .bg-censored,
 .color-light .bg-censored {
   background-color: var(--dark-text);
+}
+
+.color-os .bg-uncensored,
+.color-light .bg-uncensored {
+  background-color: transparent;
 }
 
 .color-os .link-text,
@@ -200,6 +205,10 @@ mark {
 
 .color-dark .bg-censored {
   background-color: var(--light-text);
+}
+
+.color-dark .bg-uncensored {
+  background-color: transparent;
 }
 
 .color-dark .link-text {
@@ -259,6 +268,10 @@ mark {
 
   .color-os .bg-censored {
     background-color: var(--light-text);
+  }
+
+  .color-os .bg-uncensored {
+    background-color: transparent;
   }
 
   .color-os .link-text {
@@ -424,8 +437,42 @@ header {
   padding-bottom: 0.4rem;
 }
 
-.option {
+.option,
+.special-label {
   padding-top: 0.5rem;
+}
+
+.appearance-option .special-label {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.special-label img {
+  max-width: 10rem;
+}
+
+.appearance-option input[type="checkbox"] {
+  display: none;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(2%);
+  }
+
+  50% {
+    transform: translateX(-2%);
+  }
+
+  100% {
+    transform: translateX(2%);
+  }
+}
+
+#special:checked + .special-label img {
+  animation: move 0.075s linear infinite;
 }
 
 .option input,
@@ -482,26 +529,6 @@ header {
     gap: 0.5rem;
     padding-top: 0.5rem;
   }
-
-  /* .appearance-option {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .appearance-option p {
-    border-bottom: thin solid var(--light-grey-snd);
-    padding-top: 0.5rem;
-    padding-bottom: 0.4rem;
-  }
-
-  .option {
-    padding-top: 0.5rem;
-  }
-
-  .option input,
-  .option label {
-    cursor: pointer;
-  } */
 }
 
 /* *********** BODY *********** */

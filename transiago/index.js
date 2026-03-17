@@ -6,6 +6,9 @@
     $options = d.querySelector(".right-nav"),
     $menu = d.querySelector(".menu"),
     $details = d.querySelectorAll("details"),
+    $specialInput = d.querySelector("#special"),
+    $specialImg = d.querySelector(".special-img"),
+    $censoredList = d.querySelectorAll(".bg-censored"),
     mediaQuery = window.matchMedia("(min-width: 64em)");
 
   if (!localStorage.getItem("theme")) localStorage.setItem("theme", "auto");
@@ -15,8 +18,24 @@
   let theme = localStorage.getItem("theme");
   let wide = localStorage.getItem("wide");
   let fontSize = localStorage.getItem("size");
+  let censoredArray = Array.from($censoredList);
 
-  console.error("¿Qué haces aquí, sapo?");
+  const specialChecked = () => {
+    if ($specialInput.checked) {
+      $specialImg.setAttribute("src", "./assets/eletiv.webp");
+      censoredArray.forEach((e) => {
+        e.classList.add("bg-uncensored");
+        e.classList.remove("bg-censored");
+      });
+    }
+    if (!$specialInput.checked) {
+      $specialImg.setAttribute("src", "./assets/favicon.png");
+      censoredArray.forEach((e) => {
+        e.classList.add("bg-censored");
+        e.classList.remove("bg-uncensored");
+      });
+    }
+  };
 
   const manageFont = (size) => {
     let sndSize = "sm",
@@ -49,6 +68,8 @@
     $html.classList.remove(`color-${sndColor}`);
     $html.classList.remove(`color-${trdColor}`);
   };
+
+  specialChecked();
 
   if (theme == "auto") d.querySelector("#auto").checked = "true";
 
@@ -98,15 +119,25 @@
     }
   });
 
+  $specialInput.addEventListener("change", () => specialChecked());
+
   d.addEventListener("click", (e) => {
-    let state = $options.style.display;
+    let state = $options.style.display,
+      className = e.target.className;
 
     if (
       e.target.classList[0] !== "icon" &&
       state == "block" &&
       !mediaQuery.matches
-    )
-      $options.style.display = "none";
+    ) {
+      if (className == "special-img" || className == "special-input") {
+        setTimeout(() => {
+          $options.style.display = "none";
+        }, 250);
+      } else {
+        $options.style.display = "none";
+      }
+    }
   });
 
   d.addEventListener("change", (e) => {
@@ -152,4 +183,6 @@
       localStorage.setItem("size", "lg");
     }
   });
+
+  console.error("¿Qué haces aquí, sapo?");
 })();
