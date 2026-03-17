@@ -152,6 +152,7 @@ button {
 .color-os .bg-uncensored,
 .color-light .bg-uncensored {
   background-color: transparent;
+  transition: background-color 5s ease-out;
 }
 
 .color-os .link-text,
@@ -209,6 +210,7 @@ button {
 
 .color-dark .bg-uncensored {
   background-color: transparent;
+  transition: background-color 5s ease-out;
 }
 
 .color-dark .link-text {
