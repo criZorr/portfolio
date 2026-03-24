@@ -22,14 +22,14 @@
 
   const specialChecked = () => {
     if ($specialInput.checked) {
-      $specialImg.setAttribute("src", "./assets/eletiv.webp");
+      $specialImg.setAttribute("src", "./assets/special-active.png");
       censoredArray.forEach((e) => {
         e.classList.add("bg-uncensored");
         e.classList.remove("bg-censored");
       });
     }
     if (!$specialInput.checked) {
-      $specialImg.setAttribute("src", "./assets/favicon.png");
+      $specialImg.setAttribute("src", "./assets/special.png");
       censoredArray.forEach((e) => {
         e.classList.add("bg-censored");
         e.classList.remove("bg-uncensored");
