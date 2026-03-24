@@ -9,6 +9,10 @@
     $specialInput = d.querySelector("#special"),
     $specialImg = d.querySelector(".special-img"),
     $censoredList = d.querySelectorAll(".bg-censored"),
+    $modalBtn = d.querySelectorAll(".to-modal"),
+    $modalBtnClose = d.querySelector(".close-modal"),
+    $modal = d.querySelector(".modal"),
+    $furinaVideo = d.querySelector(".furina"),
     mediaQuery = window.matchMedia("(min-width: 64em)");
 
   if (!localStorage.getItem("theme")) localStorage.setItem("theme", "auto");
@@ -101,6 +105,19 @@
     d.querySelector("#large").checked = "true";
     manageFont("lg");
   }
+
+  $modalBtnClose.addEventListener("click", () => {
+    $furinaVideo.pause();
+    $furinaVideo.currentTime = 0;
+    $modal.style.display = "none";
+  });
+
+  $modalBtn.forEach((e) => {
+    e.addEventListener("click", () => {
+      $furinaVideo.play();
+      $modal.style.display = "flex";
+    });
+  });
 
   mediaQuery.addEventListener("change", (e) => {
     if (e.matches) {

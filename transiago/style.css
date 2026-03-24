@@ -940,3 +940,36 @@ a {
 .urls a:last-child::after {
   content: "";
 }
+
+/* ********** Modal ********** */
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal video {
+  width: 100%;
+  height: auto;
+}
+
+.modal span {
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  color: #fff;
+  text-shadow: 0rem 0.1rem 0.5rem #fff;
+}
