@@ -793,8 +793,6 @@ summary span {
 }
 
 /* *********** FOOTER *********** */
-@media screen and (min-width: 64em) {
-}
 
 /* ***** Nav top ***** */
 .nav-top {
@@ -958,6 +956,12 @@ a {
   padding: 1rem;
 
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (min-width: 64em) {
+  .modal {
+    padding: 0rem;
+  }
 }
 
 .modal video {
