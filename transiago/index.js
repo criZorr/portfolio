@@ -22,14 +22,14 @@
 
   const specialChecked = () => {
     if ($specialInput.checked) {
-      $specialImg.setAttribute("src", "./assets/special-active.png");
+      $specialImg.setAttribute("src", "./assets/special-active.webp");
       censoredArray.forEach((e) => {
         e.classList.add("bg-uncensored");
         e.classList.remove("bg-censored");
       });
     }
     if (!$specialInput.checked) {
-      $specialImg.setAttribute("src", "./assets/special.png");
+      $specialImg.setAttribute("src", "./assets/special.webp");
       censoredArray.forEach((e) => {
         e.classList.add("bg-censored");
         e.classList.remove("bg-uncensored");
