@@ -114,6 +114,7 @@
 
   $modalBtn.forEach((e) => {
     e.addEventListener("click", () => {
+      $furinaVideo.currentTime = 1;
       $furinaVideo.play();
       $modal.style.display = "flex";
     });
