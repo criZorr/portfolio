@@ -973,11 +973,15 @@ a {
   height: auto;
 }
 
-.modal span {
+.close-modal {
   cursor: pointer;
   position: fixed;
   top: 1rem;
   right: 1rem;
   color: #fff;
   text-shadow: 0rem 0.1rem 0.5rem #fff;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 30s cubic-bezier(0.76, 0.05, 0.86, 0.06);
 }

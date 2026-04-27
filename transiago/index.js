@@ -117,6 +117,12 @@
       $furinaVideo.currentTime = 1;
       $furinaVideo.play();
       $modal.style.display = "flex";
+      setTimeout(() => {
+        $modalBtnClose.style.opacity = "1";
+      }, 441);
+      setTimeout(() => {
+        $modalBtnClose.style.pointerEvents = "all";
+      }, 30441);
     });
   });
 
