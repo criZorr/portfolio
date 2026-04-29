@@ -162,6 +162,11 @@ button {
   transition: color 0.25s ease-in;
 }
 
+.color-os .link-text.active,
+.color-light .link-text.active {
+  color: var(--dark-text);
+}
+
 .color-os .icon,
 .color-light .icon {
   color: var(--grey-text);
@@ -218,6 +223,10 @@ button {
   transition: color 0.25s ease-out;
 }
 
+.color-dark .link-text.active {
+  color: var(--light-text);
+}
+
 .color-dark .icon {
   color: var(--light-grey-text);
   transition: color 0.25s ease-out;
@@ -230,6 +239,14 @@ button {
 
 .color-dark .wiki-logo {
   filter: invert(1) hue-rotate(180deg);
+}
+
+.to-white .bg-censored {
+  transition: background-color 0.25s ease-in;
+}
+
+.to-white .fst-text {
+  transition: color 0.25s ease-in;
 }
 
 @media screen and (min-width: 64em) {
@@ -280,6 +297,10 @@ button {
     color: var(--link-dark-text);
   }
 
+  .color-os .link-text.active {
+    color: var(--light-text);
+  }
+
   .color-os .icon {
     color: var(--light-grey-text);
   }
@@ -309,6 +330,14 @@ button {
 
 .mar-main {
   margin-inline: clamp(1rem, 0.3043rem + 3.4783vw, 3rem);
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.link-text.active {
+  font-weight: bold;
 }
 
 /* *********** HEADER *********** */
@@ -522,6 +551,7 @@ header {
     display: flex;
     align-items: center;
     height: 2rem;
+    font-size: 1rem;
     border-bottom: thin solid var(--light-grey-snd);
   }
 

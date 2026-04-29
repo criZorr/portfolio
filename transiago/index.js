@@ -210,3 +210,26 @@
 
   console.error("¿Qué haces aquí, sapo?");
 })();
+
+((d) => {
+  const $sectios = d.querySelectorAll("[data-scroll-spy]:not(a)");
+
+  const cb = (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id") || "";
+      const $link = d.querySelector(`a[data-scroll-spy][href="#${id}"]`);
+
+      entry.isIntersecting
+        ? $link.classList.add("active")
+        : $link.classList.remove("active");
+    });
+  };
+
+  const observer = new IntersectionObserver(cb, {
+    threshold: [0.75, 0.95],
+  });
+
+  $sectios.forEach((e) => {
+    observer.observe(e);
+  });
+})(document);
